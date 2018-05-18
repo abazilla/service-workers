@@ -62,7 +62,7 @@ self.addEventListener('fetch', function(event) {
   console.log('event', event)
   event.respondWith(
     caches.match(event.request).then(function(resp) {
-      // resp can be undefined if it is not found in the cache
+      // caches.match is a promise that returns undefined if it is not found in the cache which is why the line below works
       return resp || fetch(event.request).then(function(response) {
         console.log('lol', resp, response)
         return caches.open(CACHE_NAME).then(function(cache) {

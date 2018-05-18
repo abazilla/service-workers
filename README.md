@@ -56,4 +56,8 @@ navigator.serviceWorker.addEventListener('controllerchange', () => {
 ```
 
 https://developers.google.com/web/fundamentals/primers/service-workers/high-performance-loading
+https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
 https://mdn.mozillademos.org/files/12636/sw-lifecycle.png
+https://mdn.mozillademos.org/files/12634/sw-fetch.png
+https://github.com/mdn/sw-test/blob/gh-pages/app.js
+https://serviceworke.rs/
