@@ -1,0 +1,32 @@
+<html>
+
+<head>
+  <title>Express</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <h1>Express</h1>
+  <p>Welcome to Express</p>
+  <a href="/">home</a>
+  <a href="/tokyo.html">Tokyo</a>
+  <br />
+  <br />
+  <br />
+  <img src="/images/lofi.jpg" alt="lol" />
+  <img src="/images/venom.png" alt="lol" />
+  <img src="/images/tokyo.png" alt="lol" />
+</body>
+<script>if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() { // should almost always do this so that service worker runs after other code.
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}</script>
+
+</html>

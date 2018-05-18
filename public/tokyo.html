@@ -1,0 +1,29 @@
+<html>
+
+<head>
+  <title>Express</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <h1>Express</h1>
+  <p>Welcome to Tokyo</p>
+  <a href="/">home</a>
+  <a href="/tokyo.html">Tokyo</a>
+  <br />
+  <br />
+  <img src="/images/tokyo.png" alt="lol" />
+</body>
+<script>if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}</script>
+
+</html>
