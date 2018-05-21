@@ -10,7 +10,7 @@ self.addEventListener('install', function(event) {
     caches.open(CACHE_NAME)
       .then(function(cache) {
         console.log('Opened cache');
-        return cache.addAll(urlsToCache);
+        return cache.addAll(urlsToCache); // forces cache to add following urls to the cache on install. will be saved next refresh.
       })
   );
 });
@@ -58,6 +58,10 @@ self.addEventListener('install', function(event) {
 //     );
 // });
 
+// intercepts every fetch requests, checks the cache to see if it has it.
+// if it is in the cache, give the answer in cache back to the client.
+// if not, it will send off the request, get the response back from url and put in the cache and give it back to client
+// there is a missing step that should make it so that it always fetchs if it can and put the new data in the cache.
 self.addEventListener('fetch', function(event) {
   console.log('event', event)
   event.respondWith(
